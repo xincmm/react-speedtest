@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="./speedtest.js"></script>
+    <script>
+      const s = new Speedtest() //create speedtest object
+      s.setParameter('telemetry_level', 'basic') //enable telemetry
+      s.setParameter('url_telemetry', 'results/telemetry')
+      const server = {
+        name: 'demo',
+        server: 'http://speedtest.online.njtech.edu.cn',
+        dlURL: 'garbage',
+        ulURL: 'empty',
+        pingURL: 'empty',
+        getIpURL: 'getIP',
+      }
+      s.setSelectedServer(server)
+      window.speedtest = s
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./speedtest.js"></script>
+    <script type="module" src="/dist/index.js"></script>
+  </body>
+</html>

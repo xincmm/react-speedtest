@@ -5,6 +5,19 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
+    "prettier": "^2.2.1",
     "snowpack": "^3.0.1"
+  },
+  "dependencies": {
+    "progressbar.js": "^1.1.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "semi": false,
+    "tabWidth": 2,
+    "trailingComma": "all"
   }
 }
